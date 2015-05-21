@@ -1,5 +1,7 @@
 # Delayed::Plugins::Reporting
 
+[![Code Climate](https://codeclimate.com/github/crowdworks/delayed-plugins-reporting/badges/gpa.svg)](https://codeclimate.com/github/crowdworks/delayed-plugins-reporting)
+
 A [Delayed::Job](https://github.com/collectiveidea/delayed_job) plugin to report lifecycle events like job invocations,
 failures, retries to log files or monitoring services like Datadog.
 
