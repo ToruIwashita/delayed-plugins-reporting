@@ -1,5 +1,7 @@
-require 'delayed-plugins-reporting'
-
-class Delayed::Plugins::Reporting
-  VERSION = '0.9.0'
+module Delayed
+  module Plugins
+    class Reporting
+      VERSION = '0.9.1'
+    end
+  end
 end
