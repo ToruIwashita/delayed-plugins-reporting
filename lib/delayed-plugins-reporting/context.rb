@@ -17,6 +17,11 @@ class Delayed::Plugins::Reporting
       end
     end
 
+    def before_perform(worker, job)
+      return if job.attempts.zero?
+      listener.job_retried(job)
+    end
+
     class << self
       def create(reporter: {}, formatter: {}, listener: {})
         formatter_options = formatter.dup

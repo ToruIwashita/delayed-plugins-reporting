@@ -10,6 +10,10 @@ class Delayed::Plugins::Reporting < ::Delayed::Plugin
       lifecycle.after(:failure) do |worker, job|
         context.after_failure(worker, job)
       end
+
+      lifecycle.before(:perform) do |worker, job|
+        context.before_perform(worker, job)
+      end
     end
   end
 

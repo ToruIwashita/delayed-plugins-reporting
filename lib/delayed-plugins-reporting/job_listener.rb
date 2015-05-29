@@ -10,6 +10,12 @@ class Delayed::Plugins::Reporting
       EOS
     end
 
+    def job_retried(job)
+      report.error :job_retried, job: job, message: <<-EOS.gsub!(/^\s+/, '')
+        The job retried.
+      EOS
+    end
+
     private
 
     def report
